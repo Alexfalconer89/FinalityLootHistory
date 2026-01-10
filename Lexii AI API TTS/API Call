@@ -1,0 +1,16 @@
+
+from elevenlabs.client import ElevenLabs
+from elevenlabs.play import play
+
+client = ElevenLabs(
+    api_key="sk_e7d1152de87fda77b69add199661668d06e9ec4651f27d8f"
+)
+
+audio = client.text_to_speech.convert(
+    text="bingusbungus ello my numbers",
+    voice_id="JBFqnCBsd6RMkjVDRZzb",
+    model_id="eleven_multilingual_v2",
+    output_format="mp3_44100_128",
+)
+
+play(audio)

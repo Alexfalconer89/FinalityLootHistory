@@ -1,0 +1,1 @@
+ added first api call tests. apikey set. now need a webpage to run it

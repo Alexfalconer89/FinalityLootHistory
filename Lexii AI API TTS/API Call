@@ -1,9 +1,17 @@
 
 from elevenlabs.client import ElevenLabs
 from elevenlabs.play import play
+import os
+from dotenv import load_dotenv
 
+
+load_dotenv()
+#grabbing api key
+KEY = os.getenv("KEY") 
+  
+#script to elevenlabs for tts
 client = ElevenLabs(
-    api_key="sk_e7d1152de87fda77b69add199661668d06e9ec4651f27d8f"
+    api_key = (KEY)
 )
 
 audio = client.text_to_speech.convert(
